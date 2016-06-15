@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="WcfAjaxServices" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="WcfAjaxServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="WcfAjaxServices/Imports">
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd0" namespace="WcfAjaxServices" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TTSH.Entity" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITTSHWCFService_HelloWorld_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_HelloWorld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetProject_MasterDetailsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProject_MasterDetailsByID" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetProject_MasterDetailsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProject_MasterDetailsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Project_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:Project_Master" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Project_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Project_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_PI_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:PI_Master" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_PI_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PI_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGrid_Project_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillGrid_Project_Master" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGrid_Project_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillGrid_Project_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetPI_MasterDetailsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPI_MasterDetailsByID" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetPI_MasterDetailsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPI_MasterDetailsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetDropDownData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDropDownData" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetDropDownData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDropDownDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetValidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidate" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetValidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValues" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetFeasibility_DetailsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeasibility_DetailsByID" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetFeasibility_DetailsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeasibility_DetailsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Feasibility_Details_InputMessage">
+    <wsdl:part name="parameters" element="tns:Feasibility_Details" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Feasibility_Details_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Feasibility_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Feasibility_FillGrid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Feasibility_FillGrid" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Feasibility_FillGrid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Feasibility_FillGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Sponsor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sponsor" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Sponsor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SponsorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_CRO_InputMessage">
+    <wsdl:part name="parameters" element="tns:CRO" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_CRO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CROResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetEthics_DetailsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEthics_DetailsByID" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetEthics_DetailsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEthics_DetailsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Ethics_Details_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ethics_Details" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Ethics_Details_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ethics_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Ethics_FillGrid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ethics_FillGrid" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Ethics_FillGrid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ethics_FillGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Selected_FillGrid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selected_FillGrid" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Selected_FillGrid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Selected_FillGridResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetContract_Collobrator_MasterByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContract_Collobrator_MasterByID" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetContract_Collobrator_MasterByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContract_Collobrator_MasterByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetCollobrator_MasterDetailByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollobrator_MasterDetailByID" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetCollobrator_MasterDetailByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollobrator_MasterDetailByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetText_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetText" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetText_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTextResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGrid_Contract_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillGrid_Contract_Master" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGrid_Contract_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillGrid_Contract_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGrid_Contract_Details_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillGrid_Contract_Details" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGrid_Contract_Details_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillGrid_Contract_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetContract_DetailsDetailsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContract_DetailsDetailsByID" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetContract_DetailsDetailsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContract_DetailsDetailsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetContract_MasterDetailsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContract_MasterDetailsByID" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetContract_MasterDetailsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContract_MasterDetailsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillProjectDataforContractUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillProjectDataforContractUsers" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillProjectDataforContractUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillProjectDataforContractUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetContractDeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractDeta" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetContractDeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractDetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Contract_Collobrator_Master_DML_InputMessage">
+    <wsdl:part name="parameters" element="tns:Contract_Collobrator_Master_DML" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Contract_Collobrator_Master_DML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Contract_Collobrator_Master_DMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Contract_Details_DML_InputMessage">
+    <wsdl:part name="parameters" element="tns:Contract_Details_DML" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Contract_Details_DML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Contract_Details_DMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Contract_Master_DML_InputMessage">
+    <wsdl:part name="parameters" element="tns:Contract_Master_DML" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_Contract_Master_DML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Contract_Master_DMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_ContractDetails_MultipleContractFile_DML_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContractDetails_MultipleContractFile_DML" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_ContractDetails_MultipleContractFile_DML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContractDetails_MultipleContractFile_DMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_AuthenticateADUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUsers" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_AuthenticateADUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_AuthenticateADUsersByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUsersByName" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_AuthenticateADUsersByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUsersByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetGroupNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupNames" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetGroupNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetMenusByGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenusByGroup" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetMenusByGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenusByGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetUserDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetUserDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_ExportToExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportToExcel" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_ExportToExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportToExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetSearchData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchData" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetSearchData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGrid_Audit_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillGrid_Audit" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGrid_Audit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillGrid_AuditResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGridRegulatoryMain_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillGridRegulatoryMain" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillGridRegulatoryMain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillGridRegulatoryMainResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetNewProjectEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewProjectEntry" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetNewProjectEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewProjectEntryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITTSHWCFService">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/HelloWorld" message="tns:ITTSHWCFService_HelloWorld_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/HelloWorldResponse" message="tns:ITTSHWCFService_HelloWorld_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProject_MasterDetailsByID">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetProject_MasterDetailsByID" message="tns:ITTSHWCFService_GetProject_MasterDetailsByID_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetProject_MasterDetailsByIDResponse" message="tns:ITTSHWCFService_GetProject_MasterDetailsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Project_Master">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Project_Master" message="tns:ITTSHWCFService_Project_Master_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/Project_MasterResponse" message="tns:ITTSHWCFService_Project_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PI_Master">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/PI_Master" message="tns:ITTSHWCFService_PI_Master_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/PI_MasterResponse" message="tns:ITTSHWCFService_PI_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillGrid_Project_Master">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGrid_Project_Master" message="tns:ITTSHWCFService_FillGrid_Project_Master_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGrid_Project_MasterResponse" message="tns:ITTSHWCFService_FillGrid_Project_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPI_MasterDetailsByID">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetPI_MasterDetailsByID" message="tns:ITTSHWCFService_GetPI_MasterDetailsByID_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetPI_MasterDetailsByIDResponse" message="tns:ITTSHWCFService_GetPI_MasterDetailsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDropDownData">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetDropDownData" message="tns:ITTSHWCFService_GetDropDownData_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetDropDownDataResponse" message="tns:ITTSHWCFService_GetDropDownData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidate">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetValidate" message="tns:ITTSHWCFService_GetValidate_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetValidateResponse" message="tns:ITTSHWCFService_GetValidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValues">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetValues" message="tns:ITTSHWCFService_GetValues_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetValuesResponse" message="tns:ITTSHWCFService_GetValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeasibility_DetailsByID">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetFeasibility_DetailsByID" message="tns:ITTSHWCFService_GetFeasibility_DetailsByID_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetFeasibility_DetailsByIDResponse" message="tns:ITTSHWCFService_GetFeasibility_DetailsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Feasibility_Details">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Feasibility_Details" message="tns:ITTSHWCFService_Feasibility_Details_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/Feasibility_DetailsResponse" message="tns:ITTSHWCFService_Feasibility_Details_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Feasibility_FillGrid">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Feasibility_FillGrid" message="tns:ITTSHWCFService_Feasibility_FillGrid_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/Feasibility_FillGridResponse" message="tns:ITTSHWCFService_Feasibility_FillGrid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sponsor">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Sponsor" message="tns:ITTSHWCFService_Sponsor_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/SponsorResponse" message="tns:ITTSHWCFService_Sponsor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CRO">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/CRO" message="tns:ITTSHWCFService_CRO_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/CROResponse" message="tns:ITTSHWCFService_CRO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEthics_DetailsByID">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetEthics_DetailsByID" message="tns:ITTSHWCFService_GetEthics_DetailsByID_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetEthics_DetailsByIDResponse" message="tns:ITTSHWCFService_GetEthics_DetailsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ethics_Details">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Ethics_Details" message="tns:ITTSHWCFService_Ethics_Details_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/Ethics_DetailsResponse" message="tns:ITTSHWCFService_Ethics_Details_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ethics_FillGrid">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Ethics_FillGrid" message="tns:ITTSHWCFService_Ethics_FillGrid_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/Ethics_FillGridResponse" message="tns:ITTSHWCFService_Ethics_FillGrid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selected_FillGrid">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Selected_FillGrid" message="tns:ITTSHWCFService_Selected_FillGrid_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/Selected_FillGridResponse" message="tns:ITTSHWCFService_Selected_FillGrid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContract_Collobrator_MasterByID">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetContract_Collobrator_MasterByID" message="tns:ITTSHWCFService_GetContract_Collobrator_MasterByID_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetContract_Collobrator_MasterByIDResponse" message="tns:ITTSHWCFService_GetContract_Collobrator_MasterByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollobrator_MasterDetailByID">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetCollobrator_MasterDetailByID" message="tns:ITTSHWCFService_GetCollobrator_MasterDetailByID_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetCollobrator_MasterDetailByIDResponse" message="tns:ITTSHWCFService_GetCollobrator_MasterDetailByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetText">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetText" message="tns:ITTSHWCFService_GetText_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetTextResponse" message="tns:ITTSHWCFService_GetText_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillGrid_Contract_Master">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGrid_Contract_Master" message="tns:ITTSHWCFService_FillGrid_Contract_Master_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGrid_Contract_MasterResponse" message="tns:ITTSHWCFService_FillGrid_Contract_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillGrid_Contract_Details">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGrid_Contract_Details" message="tns:ITTSHWCFService_FillGrid_Contract_Details_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGrid_Contract_DetailsResponse" message="tns:ITTSHWCFService_FillGrid_Contract_Details_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContract_DetailsDetailsByID">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetContract_DetailsDetailsByID" message="tns:ITTSHWCFService_GetContract_DetailsDetailsByID_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetContract_DetailsDetailsByIDResponse" message="tns:ITTSHWCFService_GetContract_DetailsDetailsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContract_MasterDetailsByID">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetContract_MasterDetailsByID" message="tns:ITTSHWCFService_GetContract_MasterDetailsByID_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetContract_MasterDetailsByIDResponse" message="tns:ITTSHWCFService_GetContract_MasterDetailsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillProjectDataforContractUsers">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillProjectDataforContractUsers" message="tns:ITTSHWCFService_FillProjectDataforContractUsers_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillProjectDataforContractUsersResponse" message="tns:ITTSHWCFService_FillProjectDataforContractUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractDeta">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetContractDeta" message="tns:ITTSHWCFService_GetContractDeta_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetContractDetaResponse" message="tns:ITTSHWCFService_GetContractDeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Contract_Collobrator_Master_DML">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Contract_Collobrator_Master_DML" message="tns:ITTSHWCFService_Contract_Collobrator_Master_DML_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/Contract_Collobrator_Master_DMLResponse" message="tns:ITTSHWCFService_Contract_Collobrator_Master_DML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Contract_Details_DML">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Contract_Details_DML" message="tns:ITTSHWCFService_Contract_Details_DML_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/Contract_Details_DMLResponse" message="tns:ITTSHWCFService_Contract_Details_DML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Contract_Master_DML">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/Contract_Master_DML" message="tns:ITTSHWCFService_Contract_Master_DML_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/Contract_Master_DMLResponse" message="tns:ITTSHWCFService_Contract_Master_DML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContractDetails_MultipleContractFile_DML">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/ContractDetails_MultipleContractFile_DML" message="tns:ITTSHWCFService_ContractDetails_MultipleContractFile_DML_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/ContractDetails_MultipleContractFile_DMLResponse" message="tns:ITTSHWCFService_ContractDetails_MultipleContractFile_DML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateADUsers">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/AuthenticateADUsers" message="tns:ITTSHWCFService_AuthenticateADUsers_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/AuthenticateADUsersResponse" message="tns:ITTSHWCFService_AuthenticateADUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateADUsersByName">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/AuthenticateADUsersByName" message="tns:ITTSHWCFService_AuthenticateADUsersByName_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/AuthenticateADUsersByNameResponse" message="tns:ITTSHWCFService_AuthenticateADUsersByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNames">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetGroupNames" message="tns:ITTSHWCFService_GetGroupNames_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetGroupNamesResponse" message="tns:ITTSHWCFService_GetGroupNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenusByGroup">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetMenusByGroup" message="tns:ITTSHWCFService_GetMenusByGroup_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetMenusByGroupResponse" message="tns:ITTSHWCFService_GetMenusByGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetUserDetails" message="tns:ITTSHWCFService_GetUserDetails_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetUserDetailsResponse" message="tns:ITTSHWCFService_GetUserDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportToExcel">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/ExportToExcel" message="tns:ITTSHWCFService_ExportToExcel_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/ExportToExcelResponse" message="tns:ITTSHWCFService_ExportToExcel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchData">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetSearchData" message="tns:ITTSHWCFService_GetSearchData_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetSearchDataResponse" message="tns:ITTSHWCFService_GetSearchData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillGrid_Audit">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGrid_Audit" message="tns:ITTSHWCFService_FillGrid_Audit_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGrid_AuditResponse" message="tns:ITTSHWCFService_FillGrid_Audit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillGridRegulatoryMain">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGridRegulatoryMain" message="tns:ITTSHWCFService_FillGridRegulatoryMain_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/FillGridRegulatoryMainResponse" message="tns:ITTSHWCFService_FillGridRegulatoryMain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewProjectEntry">
+      <wsdl:input wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetNewProjectEntry" message="tns:ITTSHWCFService_GetNewProjectEntry_InputMessage" />
+      <wsdl:output wsaw:Action="WcfAjaxServices/ITTSHWCFService/GetNewProjectEntryResponse" message="tns:ITTSHWCFService_GetNewProjectEntry_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

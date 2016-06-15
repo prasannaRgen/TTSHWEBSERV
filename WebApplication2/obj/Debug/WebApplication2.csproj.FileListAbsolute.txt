@@ -1,0 +1,7 @@
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\WebApplication2\bin\WebApplication2.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\WebApplication2\bin\WebApplication2.pdb
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\WebApplication2\obj\Debug\WebApplication2.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\WebApplication2\obj\Debug\WebApplication2.pdb
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\WebApplication2\bin\WebApplication2.dll.config
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\WebApplication2\bin\Microsoft.SqlServer.Types.dll

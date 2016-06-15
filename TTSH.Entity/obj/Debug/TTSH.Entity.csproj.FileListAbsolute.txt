@@ -1,0 +1,5 @@
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.Entity\bin\Debug\TTSH.Entity.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.Entity\bin\Debug\TTSH.Entity.pdb
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.Entity\obj\Debug\TTSH.Entity.csprojResolveAssemblyReference.cache
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.Entity\obj\Debug\TTSH.Entity.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.Entity\obj\Debug\TTSH.Entity.pdb

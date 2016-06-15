@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{571A99A6-09DB-4E4D-8E40-4445DDE0BBC8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C290AD95-8B33-4442-8CA0-2A7ED3310A4F} = {C290AD95-8B33-4442-8CA0-2A7ED3310A4F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTSH.BusinessLogic", "TTSH.BusinessLogic\TTSH.BusinessLogic.csproj", "{A2DA6AA9-9432-479C-9DE4-40D95F3D9F9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTSH.DataAccess", "TTSH.DataAccess\TTSH.DataAccess.csproj", "{3FD81961-3B20-4964-89E3-AEF5C8B3E90A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTSH.Entity", "TTSH.Entity\TTSH.Entity.csproj", "{8480C6FE-AF25-44CD-9A42-01DEF589B9B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTSHWCFLayer", "TTSHWCFLayer\TTSHWCFLayer.csproj", "{C290AD95-8B33-4442-8CA0-2A7ED3310A4F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.0.108:8080/tfs/rsin_tfs
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WebApplication2\\WebApplication2.csproj
+		SccProjectName1 = WebApplication2
+		SccLocalPath1 = WebApplication2
+		SccProjectUniqueName2 = TTSH.BusinessLogic\\TTSH.BusinessLogic.csproj
+		SccProjectName2 = TTSH.BusinessLogic
+		SccLocalPath2 = TTSH.BusinessLogic
+		SccProjectUniqueName3 = TTSH.DataAccess\\TTSH.DataAccess.csproj
+		SccProjectName3 = TTSH.DataAccess
+		SccLocalPath3 = TTSH.DataAccess
+		SccProjectUniqueName4 = TTSH.Entity\\TTSH.Entity.csproj
+		SccProjectName4 = TTSH.Entity
+		SccLocalPath4 = TTSH.Entity
+		SccProjectUniqueName5 = TTSHWCFLayer\\TTSHWCFLayer.csproj
+		SccProjectName5 = TTSHWCFLayer
+		SccLocalPath5 = TTSHWCFLayer
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{571A99A6-09DB-4E4D-8E40-4445DDE0BBC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571A99A6-09DB-4E4D-8E40-4445DDE0BBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571A99A6-09DB-4E4D-8E40-4445DDE0BBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571A99A6-09DB-4E4D-8E40-4445DDE0BBC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2DA6AA9-9432-479C-9DE4-40D95F3D9F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2DA6AA9-9432-479C-9DE4-40D95F3D9F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2DA6AA9-9432-479C-9DE4-40D95F3D9F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2DA6AA9-9432-479C-9DE4-40D95F3D9F9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD81961-3B20-4964-89E3-AEF5C8B3E90A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD81961-3B20-4964-89E3-AEF5C8B3E90A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD81961-3B20-4964-89E3-AEF5C8B3E90A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD81961-3B20-4964-89E3-AEF5C8B3E90A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8480C6FE-AF25-44CD-9A42-01DEF589B9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8480C6FE-AF25-44CD-9A42-01DEF589B9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8480C6FE-AF25-44CD-9A42-01DEF589B9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8480C6FE-AF25-44CD-9A42-01DEF589B9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C290AD95-8B33-4442-8CA0-2A7ED3310A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C290AD95-8B33-4442-8CA0-2A7ED3310A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C290AD95-8B33-4442-8CA0-2A7ED3310A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C290AD95-8B33-4442-8CA0-2A7ED3310A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

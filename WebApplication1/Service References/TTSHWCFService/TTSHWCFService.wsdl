@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TTSHWCFService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TTSH.Entity" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Web.UI.WebControls" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Web.UI" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Web.ModelBinding" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System.Globalization" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System.Web" />
+      <xsd:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITTSHWCFService_GetDropDownData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDropDownData" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetDropDownData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDropDownDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillDropDown_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillDropDown" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_FillDropDown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillDropDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_AuthenticateADUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUsers" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_AuthenticateADUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_AuthenticateADUsersByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUsersByName" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_AuthenticateADUsersByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateADUsersByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetGroupNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupNames" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_GetGroupNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_ExportToExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportToExcel" />
+  </wsdl:message>
+  <wsdl:message name="ITTSHWCFService_ExportToExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportToExcelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITTSHWCFService">
+    <wsdl:operation name="GetDropDownData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITTSHWCFService/GetDropDownData" message="tns:ITTSHWCFService_GetDropDownData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITTSHWCFService/GetDropDownDataResponse" message="tns:ITTSHWCFService_GetDropDownData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillDropDown">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITTSHWCFService/FillDropDown" message="tns:ITTSHWCFService_FillDropDown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITTSHWCFService/FillDropDownResponse" message="tns:ITTSHWCFService_FillDropDown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateADUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITTSHWCFService/AuthenticateADUsers" message="tns:ITTSHWCFService_AuthenticateADUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITTSHWCFService/AuthenticateADUsersResponse" message="tns:ITTSHWCFService_AuthenticateADUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateADUsersByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITTSHWCFService/AuthenticateADUsersByName" message="tns:ITTSHWCFService_AuthenticateADUsersByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITTSHWCFService/AuthenticateADUsersByNameResponse" message="tns:ITTSHWCFService_AuthenticateADUsersByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITTSHWCFService/GetGroupNames" message="tns:ITTSHWCFService_GetGroupNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITTSHWCFService/GetGroupNamesResponse" message="tns:ITTSHWCFService_GetGroupNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportToExcel">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITTSHWCFService/ExportToExcel" message="tns:ITTSHWCFService_ExportToExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITTSHWCFService/ExportToExcelResponse" message="tns:ITTSHWCFService_ExportToExcel_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="bb_ITTSHWCFService" type="tns:ITTSHWCFService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDropDownData">
+      <soap:operation soapAction="http://tempuri.org/ITTSHWCFService/GetDropDownData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillDropDown">
+      <soap:operation soapAction="http://tempuri.org/ITTSHWCFService/FillDropDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateADUsers">
+      <soap:operation soapAction="http://tempuri.org/ITTSHWCFService/AuthenticateADUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateADUsersByName">
+      <soap:operation soapAction="http://tempuri.org/ITTSHWCFService/AuthenticateADUsersByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNames">
+      <soap:operation soapAction="http://tempuri.org/ITTSHWCFService/GetGroupNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportToExcel">
+      <soap:operation soapAction="http://tempuri.org/ITTSHWCFService/ExportToExcel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TTSHWCFService">
+    <wsdl:port name="bb_ITTSHWCFService" binding="tns:bb_ITTSHWCFService">
+      <soap:address location="http://localhost:27923/TTSHWCFService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

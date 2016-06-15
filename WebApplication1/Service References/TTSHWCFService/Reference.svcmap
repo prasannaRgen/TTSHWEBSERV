@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2f567912-186d-4c6e-8181-97156db9ab06" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:27923/TTSHWCFService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TTSHWCFService.xsd" MetadataType="Schema" ID="0a1bc305-fbee-4792-b418-91ba4cc31b80" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd6" />
+    <MetadataFile FileName="TTSHWCFService1.xsd" MetadataType="Schema" ID="1c6c6ff9-9eb0-4343-9d04-44f630ea6b97" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TTSHWCFService.wsdl" MetadataType="Wsdl" ID="f6c34295-8ea3-4f31-8058-ade8e332ed3b" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?wsdl" />
+    <MetadataFile FileName="TTSHWCFService.disco" MetadataType="Disco" ID="5e3803bd-1c71-4a73-b46c-7edd092199c7" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?disco" />
+    <MetadataFile FileName="TTSHWCFService2.xsd" MetadataType="Schema" ID="df6e46e3-9241-4138-8cb3-f187a402a905" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd9" />
+    <MetadataFile FileName="TTSHWCFService3.xsd" MetadataType="Schema" ID="efe05c36-4995-4b10-803d-a0f3d1ae922f" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd5" />
+    <MetadataFile FileName="TTSHWCFService4.xsd" MetadataType="Schema" ID="660a2c8a-8cc0-4d10-8560-934cf6932af7" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TTSHWCFService5.xsd" MetadataType="Schema" ID="c27898f3-25af-4df9-ae1b-90daa69d5c94" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd8" />
+    <MetadataFile FileName="TTSHWCFService6.xsd" MetadataType="Schema" ID="3a6ea7ce-e0e2-472e-b27c-08715c27e860" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd4" />
+    <MetadataFile FileName="TTSHWCFService7.xsd" MetadataType="Schema" ID="3badeb62-95ad-4649-8261-7120a984f3af" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TTSHWCFService8.xsd" MetadataType="Schema" ID="97f9639a-069f-42cc-acba-be2a0f17fd2e" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd10" />
+    <MetadataFile FileName="TTSHWCFService9.xsd" MetadataType="Schema" ID="db999f17-9389-4059-87ea-468ed6400c16" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd7" />
+    <MetadataFile FileName="TTSHWCFService10.xsd" MetadataType="Schema" ID="91d8d15e-ccc2-4c54-9694-a77f56b98ef3" SourceId="1" SourceUrl="http://localhost:27923/TTSHWCFService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

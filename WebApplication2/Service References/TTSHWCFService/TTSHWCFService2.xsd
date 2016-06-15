@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="WcfAjaxServices" elementFormDefault="qualified" targetNamespace="WcfAjaxServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TTSH.Entity" />
+  <xs:import schemaLocation="http://localhost:27923/TTSHWCFService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="HelloWorld">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HelloWorldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HelloWorldResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProject_MasterDetailsByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProject_MasterDetailsByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetProject_MasterDetailsByIDResult" nillable="true" type="q1:Project_Master" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Project_Master">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="_Project_Master" nillable="true" type="q2:Project_Master" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="pdi" nillable="true" type="q3:ArrayOfProject_Dept_PI" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="pcd" nillable="true" type="q4:ArrayOfProject_Coordinator_Details" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Project_MasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Project_MasterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PI_Master">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="_PI_Master" nillable="true" type="q5:PI_Master" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PI_MasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PI_MasterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGrid_Project_Master">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGrid_Project_MasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="FillGrid_Project_MasterResult" nillable="true" type="q6:ArrayOfProject_Master" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPI_MasterDetailsByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPI_MasterDetailsByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPI_MasterDetailsByIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDropDownData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="dropDownName" type="q7:DropDownName" />
+        <xs:element minOccurs="0" name="param1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="param5" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDropDownDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetDropDownDataResult" nillable="true" type="q8:ArrayOfclsDropDown" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_ModuleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_A" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_B" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_C" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_D" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetValidateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_ModuleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_A" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_B" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_C" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_D" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetValuesResult" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFeasibility_DetailsByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFeasibility_DetailsByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetFeasibility_DetailsByIDResult" nillable="true" type="q10:Feasibility_Details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Feasibility_Details">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="_Feasibility_Details" nillable="true" type="q11:Feasibility_Details" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="mode" type="q12:Mode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Feasibility_DetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Feasibility_DetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Feasibility_FillGrid">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Feasibility_FillGridResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="Feasibility_FillGridResult" nillable="true" type="q13:ArrayOfFeasibility_Grid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sponsor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="sponsor" nillable="true" type="q14:Sponsor_Master" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SponsorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SponsorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CRO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="CRO" nillable="true" type="q15:CRO_Master" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CROResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CROResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEthics_DetailsByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEthics_DetailsByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetEthics_DetailsByIDResult" nillable="true" type="q16:Ethics_Details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ethics_Details">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="_Ethics_Details" nillable="true" type="q17:Ethics_Details" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="mode" type="q18:Mode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ethics_DetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ethics_DetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ethics_FillGrid">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ethics_FillGridResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="Ethics_FillGridResult" nillable="true" type="q19:ArrayOfEthics_Grid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Selected_FillGrid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isSelectedTeamUser" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Selected_FillGridResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="Selected_FillGridResult" nillable="true" type="q20:ArrayOfSelected_Grid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContract_Collobrator_MasterByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContract_Collobrator_MasterByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetContract_Collobrator_MasterByIDResult" nillable="true" type="q21:Contract_Collobrator_Master" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCollobrator_MasterDetailByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCollobrator_MasterDetailByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCollobrator_MasterDetailByIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetText">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Prefix" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="count" type="xs:int" />
+        <xs:element minOccurs="0" name="ContextKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetTextResult" nillable="true" type="q22:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGrid_Contract_Master">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGrid_Contract_MasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="FillGrid_Contract_MasterResult" nillable="true" type="q23:ArrayOfContract_Master" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGrid_Contract_Details">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGrid_Contract_DetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="FillGrid_Contract_DetailsResult" nillable="true" type="q24:ArrayOfContract_Details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContract_DetailsDetailsByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContract_DetailsDetailsByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetContract_DetailsDetailsByIDResult" nillable="true" type="q25:Contract_Details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContract_MasterDetailsByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContract_MasterDetailsByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetContract_MasterDetailsByIDResult" nillable="true" type="q26:Contract_Master" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillProjectDataforContractUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillProjectDataforContractUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="FillProjectDataforContractUsersResult" nillable="true" type="q27:ProjectDataforContractUsers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractDeta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="ProjectId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractDetaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetContractDetaResult" nillable="true" type="q28:Contract_Details" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Contract_Collobrator_Master_DML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="_Contract_Collobrator_Master" nillable="true" type="q29:Contract_Collobrator_Master" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Contract_Collobrator_Master_DMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Contract_Collobrator_Master_DMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Contract_Details_DML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="_Contract_Details" nillable="true" type="q30:Contract_Details" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="lstSelCollab" nillable="true" type="q31:ArrayOfSelectedCollborators_Details" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="lstSelClause" nillable="true" type="q32:ArrayOfSelected_Clause_Details" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="lstmultiple" nillable="true" type="q33:ArrayOfContractDetails_MultipleContractFile" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Contract_Details_DMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Contract_Details_DMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Contract_Master_DML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="_Contract_Master" nillable="true" type="q34:Contract_Master" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="clist" nillable="true" type="q35:ArrayOfContract_Collaborator_Details" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Contract_Master_DMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Contract_Master_DMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractDetails_MultipleContractFile_DML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="_ContractDetails_MultipleContractFile" nillable="true" type="q36:ContractDetails_MultipleContractFile" />
+        <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContractDetails_MultipleContractFile_DMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ContractDetails_MultipleContractFile_DMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateADUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Adserver" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateADUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthenticateADUsersResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateADUsersByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateADUsersByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthenticateADUsersByNameResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetGroupNamesResult" nillable="true" type="q37:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenusByGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMenusByGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetMenusByGroupResult" nillable="true" type="q38:ArrayOfADUserDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetUserDetailsResult" nillable="true" type="q39:ADUserDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportToExcel">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportToExcelResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSearchData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchInputValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SearchFilterCriteria" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSearchDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetSearchDataResult" nillable="true" type="q40:ArrayOfKeyValueOfstringArrayOfSearchp9K3Nc1C" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGrid_Audit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FromDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ToDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGrid_AuditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="FillGrid_AuditResult" nillable="true" type="q41:ArrayOfAudit" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGridRegulatoryMain">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FillGridRegulatoryMainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="FillGridRegulatoryMainResult" nillable="true" type="q42:ArrayOfRegulatory_Master" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewProjectEntry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewProjectEntryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/TTSH.Entity" minOccurs="0" name="GetNewProjectEntryResult" nillable="true" type="q43:RegulatoryNewProjectEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

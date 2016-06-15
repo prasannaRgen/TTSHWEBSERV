@@ -1,0 +1,9 @@
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.DataAccess\bin\Debug\TTSH.DataAccess.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.DataAccess\bin\Debug\TTSH.DataAccess.pdb
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.DataAccess\bin\Debug\MySql.Data.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.DataAccess\obj\Debug\TTSH.DataAccess.csprojResolveAssemblyReference.cache
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.DataAccess\obj\Debug\TTSH.DataAccess.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.DataAccess\obj\Debug\TTSH.DataAccess.pdb
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.DataAccess\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.DataAccess\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.DataAccess\bin\Debug\Microsoft.ReportViewer.WebForms.xml

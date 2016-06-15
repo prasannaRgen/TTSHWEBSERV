@@ -1,0 +1,10 @@
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\bin\Debug\TTSH.BusinessLogic.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\bin\Debug\TTSH.BusinessLogic.pdb
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\bin\Debug\TTSH.DataAccess.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\bin\Debug\TTSH.Entity.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\bin\Debug\MySql.Data.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\bin\Debug\TTSH.DataAccess.pdb
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\bin\Debug\TTSH.Entity.pdb
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\obj\Debug\TTSH.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\obj\Debug\TTSH.BusinessLogic.dll
+D:\PRASANNA PROJECTS\TTSH\TTSH_DEV_NEW\TTSHServiceLayer\TTSH.BusinessLogic\obj\Debug\TTSH.BusinessLogic.pdb
